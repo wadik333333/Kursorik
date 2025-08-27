@@ -1,0 +1,2 @@
+# Kursorik
+Asss
