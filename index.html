@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stories Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://interactive-examples.mdn.mozilla.net" />
+    <link rel="preconnect" href="https://samplelib.com" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 class="site-title">Stories</h1>
+    </header>
+
+    <main class="page">
+      <section class="stories-section">
+        <div class="stories-bar" id="storiesBar" aria-label="Истории" role="list"></div>
+      </section>
+    </main>
+
+    <div class="viewer hidden" id="storyViewer" aria-hidden="true">
+      <div class="viewer-inner">
+        <div class="progress" id="progress"></div>
+
+        <div class="viewer-header">
+          <div class="viewer-user">
+            <img id="viewerAvatar" class="avatar" alt="avatar" />
+            <span id="viewerUsername" class="username"></span>
+          </div>
+          <div class="viewer-controls">
+            <button id="muteToggle" class="icon-btn" aria-label="Звук">
+              <span id="muteIcon">🔇</span>
+            </button>
+            <button id="closeViewer" class="icon-btn" aria-label="Закрыть">✕</button>
+          </div>
+        </div>
+
+        <div class="viewer-stage" id="viewerStage">
+          <img id="storyImage" class="story-media" alt="story image" />
+          <video id="storyVideo" class="story-media" playsinline webkit-playsinline preload="metadata"></video>
+
+          <div class="tap-zone left" id="tapPrev" aria-hidden="true"></div>
+          <div class="tap-zone right" id="tapNext" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="./script.js"></script>
+  </body>
+  </html>
+
